@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Accessible enterprise reports"><title>Enterprise Dashboard | Reports</title><link rel="stylesheet" href="assets/styles.css"></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header"><div class="brand"><span class="brand-mark" aria-hidden="true">ED</span><span><strong>Enterprise Dashboard</strong><small>Operations workspace</small></span></div><nav aria-label="Primary navigation"><a href="index.html">Dashboard</a><a href="reports.html" aria-current="page">Reports</a><a href="settings.html">Settings</a></nav><button class="secondary-button" id="open-help" type="button" aria-haspopup="dialog">Help</button></header>
+<div class="layout"><aside class="sidebar" aria-label="Dashboard sidebar"><nav aria-label="Dashboard sections"><p class="nav-heading">Workspace</p><a class="side-link" href="index.html">Overview</a><a class="side-link active" href="reports.html" aria-current="page">Data reports</a><a class="side-link" href="settings.html">Account settings</a></nav></aside>
+<main id="main-content" class="main-content">
+<header class="page-header"><div><p class="eyebrow">Reports</p><h1>Service request report</h1><p>Review request status using a properly structured data table.</p></div></header>
+<section class="panel" aria-labelledby="filters-title"><h2 id="filters-title">Report filters</h2><form class="filter-form" action="reports.html" method="get"><fieldset><legend>Choose report criteria</legend><div class="form-grid"><div class="form-field"><label for="status">Status</label><select id="status" name="status"><option>All statuses</option><option>Open</option><option>In review</option><option>Completed</option></select></div><div class="form-field"><label for="period">Reporting period</label><select id="period" name="period"><option>Last 7 days</option><option>Last 30 days</option><option>Last 90 days</option></select></div></div></fieldset><button class="primary-button" type="submit">Apply filters</button></form></section>
+<section class="panel" aria-labelledby="table-title"><header class="panel-header"><h2 id="table-title">Requests</h2><p role="status" aria-live="polite">Showing 5 requests</p></header><div class="table-wrapper"><table><caption>Service requests and current processing status</caption><thead><tr><th scope="col">Request ID</th><th scope="col">Requester</th><th scope="col">Service</th><th scope="col">Submitted</th><th scope="col">Status</th></tr></thead><tbody>
+<tr><th scope="row">REQ-1048</th><td>Priya Shah</td><td>Account access</td><td>13 Sep 2026, 15:42</td><td><span class="badge badge-warning">In review</span></td></tr>
+<tr><th scope="row">REQ-1047</th><td>Arjun Das</td><td>Data export</td><td>13 Sep 2026, 15:19</td><td><span class="badge badge-success">Completed</span></td></tr>
+<tr><th scope="row">REQ-1046</th><td>Neha Roy</td><td>Profile update</td><td>13 Sep 2026, 14:58</td><td><span class="badge">Queued</span></td></tr>
+<tr><th scope="row">REQ-1045</th><td>Rahul Sen</td><td>Certificate</td><td>13 Sep 2026, 14:27</td><td><span class="badge badge-success">Completed</span></td></tr>
+<tr><th scope="row">REQ-1044</th><td>Ananya Paul</td><td>Address update</td><td>13 Sep 2026, 13:50</td><td><span class="badge badge-warning">In review</span></td></tr>
+</tbody></table></div></section>
+<aside class="panel"><h2>Table accessibility notes</h2><ul><li>Caption describes the table purpose.</li><li>Headers use <code>scope</code>.</li><li>Status is conveyed with text, not color alone.</li></ul></aside>
+</main></div>
+<footer class="site-footer"><div><strong>Enterprise Dashboard</strong><p>Semantic HTML5 accessibility demonstration.</p></div><nav aria-label="Footer navigation"><a href="index.html">Dashboard</a><a href="reports.html" aria-current="page">Reports</a><a href="settings.html">Settings</a></nav></footer>
+<dialog id="help-dialog" aria-labelledby="help-title"><form method="dialog" class="dialog-card"><header class="panel-header"><h2 id="help-title">Need help?</h2><button class="secondary-button" value="close">Close</button></header><p>All essential controls support keyboard operation.</p><button class="primary-button" value="close">Got it</button></form></dialog>
+<script src="assets/app.js"></script></body></html>

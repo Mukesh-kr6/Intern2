@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Accessible enterprise dashboard">
+<title>Enterprise Dashboard | Overview</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="brand"><span class="brand-mark" aria-hidden="true">ED</span><span><strong>Enterprise Dashboard</strong><small>Operations workspace</small></span></div>
+  <nav aria-label="Primary navigation"><a href="index.html" aria-current="page">Dashboard</a><a href="reports.html">Reports</a><a href="settings.html">Settings</a></nav>
+  <button class="secondary-button" id="open-help" type="button" aria-haspopup="dialog">Help</button>
+</header>
+<div class="layout">
+<aside class="sidebar" aria-label="Dashboard sidebar">
+  <nav aria-label="Dashboard sections">
+    <p class="nav-heading">Workspace</p>
+    <a class="side-link active" href="index.html" aria-current="page">Overview</a>
+    <a class="side-link" href="reports.html">Data reports</a>
+    <a class="side-link" href="settings.html">Account settings</a>
+  </nav>
+  <section class="sidebar-card" aria-labelledby="status-title">
+    <h2 id="status-title">System status</h2>
+    <p><span class="status-dot" aria-hidden="true"></span>All systems operational</p>
+    <a href="reports.html">View service report</a>
+  </section>
+</aside>
+<main id="main-content" class="main-content">
+<header class="page-header">
+  <div><p class="eyebrow">Overview</p><h1>Operations dashboard</h1><p>Monitor activity, service health and recent requests from one accessible workspace.</p></div>
+  <button class="primary-button" id="open-request" type="button" aria-haspopup="dialog">Create request</button>
+</header>
+<section aria-labelledby="metrics-title">
+<h2 id="metrics-title">Key metrics</h2>
+<div class="metrics">
+<article class="metric-card"><h3>Open requests</h3><p class="metric-value">128</p><p>12 fewer than last week</p></article>
+<article class="metric-card"><h3>Completed today</h3><p class="metric-value">64</p><p>8% above target</p></article>
+<article class="metric-card"><h3>Average response</h3><p class="metric-value">2.4h</p><p>Within service target</p></article>
+</div>
+</section>
+<section class="content-grid" aria-label="Operational information">
+<section class="panel" aria-labelledby="activity-title">
+<header class="panel-header"><div><p class="eyebrow">Recent activity</p><h2 id="activity-title">Latest requests</h2></div><a href="reports.html">View all</a></header>
+<ul class="activity-list">
+<li><article><div><h3>REQ-1048 — Account access</h3><p>Priya Shah · 18 minutes ago</p></div><span class="badge badge-warning">In review</span></article></li>
+<li><article><div><h3>REQ-1047 — Data export</h3><p>Arjun Das · 41 minutes ago</p></div><span class="badge badge-success">Completed</span></article></li>
+<li><article><div><h3>REQ-1046 — Profile update</h3><p>Neha Roy · 1 hour ago</p></div><span class="badge">Queued</span></article></li>
+</ul>
+</section>
+<aside class="panel" aria-labelledby="notice-title"><p class="eyebrow">Notice</p><h2 id="notice-title">Accessibility review</h2><p>Review keyboard flows and form validation before the next release.</p><a class="secondary-button" href="settings.html">Review settings</a></aside>
+</section>
+<section class="panel" aria-labelledby="architecture-title">
+<h2 id="architecture-title">Semantic page hierarchy</h2>
+<p class="tree"><code>&lt;header&gt;</code> → <code>&lt;nav&gt;</code> + <code>&lt;aside&gt;</code> → <code>&lt;main&gt;</code> → <code>&lt;section&gt;</code> → <code>&lt;article&gt;</code> → <code>&lt;footer&gt;</code></p>
+</section>
+</main>
+</div>
+<footer class="site-footer"><div><strong>Enterprise Dashboard</strong><p>Semantic HTML5 accessibility demonstration.</p></div><nav aria-label="Footer navigation"><a href="index.html">Dashboard</a><a href="reports.html">Reports</a><a href="settings.html">Settings</a></nav></footer>
+
+<dialog id="help-dialog" aria-labelledby="help-title">
+<form method="dialog" class="dialog-card"><header class="panel-header"><h2 id="help-title">Need help?</h2><button class="secondary-button" value="close" aria-label="Close help dialog">Close</button></header><p>Use the navigation to move between dashboard areas. All essential controls support keyboard operation.</p><button class="primary-button" value="close">Got it</button></form>
+</dialog>
+<dialog id="request-dialog" aria-labelledby="request-title">
+<form method="dialog" class="dialog-card" id="request-form">
+<header class="panel-header"><h2 id="request-title">Create service request</h2><button class="secondary-button" value="cancel" aria-label="Close request dialog">Close</button></header>
+<fieldset><legend>Request details</legend>
+<div class="form-field"><label for="subject">Subject <span aria-hidden="true">*</span></label><input id="subject" name="subject" required maxlength="80" aria-describedby="subject-help"><small id="subject-help">Use a short, descriptive title.</small></div>
+<div class="form-field"><label for="description">Description <span aria-hidden="true">*</span></label><textarea id="description" name="description" rows="4" required></textarea></div>
+</fieldset>
+<div class="form-actions"><button class="secondary-button" value="cancel">Cancel</button><button class="primary-button" value="submit">Submit request</button></div>
+</form>
+</dialog>
+<script src="assets/app.js"></script>
+</body>
+</html>
